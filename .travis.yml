@@ -1,0 +1,5 @@
+language: objective-c
+install:
+    - gem install xcpretty
+script:
+    - set -o pipefail && xcodebuild -workspace Demo/OAuthIOExample.xcworkspace -scheme OAuthIOExample -configuration Release clean build | xcpretty -c
