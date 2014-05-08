@@ -1,5 +1,6 @@
 language: objective-c
-install:
-    - gem install xcpretty
+rvm: 1.9.3
+before_install:
+    - gem install cocoapods xcpretty
 script:
     - set -o pipefail && xcodebuild -workspace Demo/OAuthIOExample.xcworkspace -scheme OAuthIOExample -configuration Release clean build | xcpretty -c
