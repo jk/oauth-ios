@@ -1,3 +1,6 @@
+# OS X
+.DS_Store
+
 # Xcode
 .DS_Store
 */build/*
@@ -15,6 +18,7 @@ profile
 DerivedData
 .idea/
 *.hmap
+*.ipa
 *.xccheckout
 
 #CocoaPods
