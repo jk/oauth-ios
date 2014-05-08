@@ -1,0 +1,6 @@
+platform :ios, "7.1"
+
+pod 'OAuth.io', :head
+
+# target "OAuthIOExampleTests" do
+# end

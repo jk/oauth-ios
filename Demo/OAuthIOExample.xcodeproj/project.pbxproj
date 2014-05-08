@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C16659B8ABB44FADBAD76E1D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63B394BE0D164322A3CEC025 /* libPods.a */; };
 		CF21067E1853267D00290710 /* TwitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF21067D1853267D00290710 /* TwitterViewController.m */; };
 		CFB3F62B184619B000E2D967 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB3F62A184619B000E2D967 /* Foundation.framework */; };
 		CFB3F62D184619B000E2D967 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB3F62C184619B000E2D967 /* CoreGraphics.framework */; };
@@ -22,12 +23,6 @@
 		CFB3F64F184619B000E2D967 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFB3F62E184619B000E2D967 /* UIKit.framework */; };
 		CFB3F657184619B000E2D967 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CFB3F655184619B000E2D967 /* InfoPlist.strings */; };
 		CFB3F659184619B000E2D967 /* OAuthIOExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB3F658184619B000E2D967 /* OAuthIOExampleTests.m */; };
-		CFB3F66E184619CA00E2D967 /* NSURLRequest+NSURLRequestAllowSSL.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB3F664184619CA00E2D967 /* NSURLRequest+NSURLRequestAllowSSL.m */; };
-		CFB3F66F184619CA00E2D967 /* OAuthIO.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB3F666184619CA00E2D967 /* OAuthIO.m */; };
-		CFB3F670184619CA00E2D967 /* OAuthIOData.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB3F668184619CA00E2D967 /* OAuthIOData.m */; };
-		CFB3F671184619CA00E2D967 /* OAuthIOModal.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB3F66A184619CA00E2D967 /* OAuthIOModal.m */; };
-		CFB3F672184619CA00E2D967 /* OAuthIOModal.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFB3F66B184619CA00E2D967 /* OAuthIOModal.xib */; };
-		CFB3F673184619CA00E2D967 /* OAuthIORequest.m in Sources */ = {isa = PBXBuildFile; fileRef = CFB3F66D184619CA00E2D967 /* OAuthIORequest.m */; };
 		CFE8FCCA1846AAA9007C4BF6 /* GitHubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CFE8FCC91846AAA9007C4BF6 /* GitHubViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		63B394BE0D164322A3CEC025 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABBCFC5BD6C342D2806E419F /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		CF21067C1853267D00290710 /* TwitterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterViewController.h; sourceTree = "<group>"; };
 		CF21067D1853267D00290710 /* TwitterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterViewController.m; sourceTree = "<group>"; };
 		CFB3F627184619B000E2D967 /* OAuthIOExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OAuthIOExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,17 +60,6 @@
 		CFB3F654184619B000E2D967 /* OAuthIOExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OAuthIOExampleTests-Info.plist"; sourceTree = "<group>"; };
 		CFB3F656184619B000E2D967 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CFB3F658184619B000E2D967 /* OAuthIOExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OAuthIOExampleTests.m; sourceTree = "<group>"; };
-		CFB3F663184619CA00E2D967 /* NSURLRequest+NSURLRequestAllowSSL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLRequest+NSURLRequestAllowSSL.h"; sourceTree = "<group>"; };
-		CFB3F664184619CA00E2D967 /* NSURLRequest+NSURLRequestAllowSSL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLRequest+NSURLRequestAllowSSL.m"; sourceTree = "<group>"; };
-		CFB3F665184619CA00E2D967 /* OAuthIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthIO.h; sourceTree = "<group>"; };
-		CFB3F666184619CA00E2D967 /* OAuthIO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthIO.m; sourceTree = "<group>"; };
-		CFB3F667184619CA00E2D967 /* OAuthIOData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthIOData.h; sourceTree = "<group>"; };
-		CFB3F668184619CA00E2D967 /* OAuthIOData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthIOData.m; sourceTree = "<group>"; };
-		CFB3F669184619CA00E2D967 /* OAuthIOModal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthIOModal.h; sourceTree = "<group>"; };
-		CFB3F66A184619CA00E2D967 /* OAuthIOModal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthIOModal.m; sourceTree = "<group>"; };
-		CFB3F66B184619CA00E2D967 /* OAuthIOModal.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OAuthIOModal.xib; sourceTree = "<group>"; };
-		CFB3F66C184619CA00E2D967 /* OAuthIORequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthIORequest.h; sourceTree = "<group>"; };
-		CFB3F66D184619CA00E2D967 /* OAuthIORequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthIORequest.m; sourceTree = "<group>"; };
 		CFE8FCC81846AAA9007C4BF6 /* GitHubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GitHubViewController.h; sourceTree = "<group>"; };
 		CFE8FCC91846AAA9007C4BF6 /* GitHubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GitHubViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -86,6 +72,7 @@
 				CFB3F62D184619B000E2D967 /* CoreGraphics.framework in Frameworks */,
 				CFB3F62F184619B000E2D967 /* UIKit.framework in Frameworks */,
 				CFB3F62B184619B000E2D967 /* Foundation.framework in Frameworks */,
+				C16659B8ABB44FADBAD76E1D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +96,7 @@
 				CFB3F652184619B000E2D967 /* OAuthIOExampleTests */,
 				CFB3F629184619B000E2D967 /* Frameworks */,
 				CFB3F628184619B000E2D967 /* Products */,
+				ABBCFC5BD6C342D2806E419F /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +116,7 @@
 				CFB3F62C184619B000E2D967 /* CoreGraphics.framework */,
 				CFB3F62E184619B000E2D967 /* UIKit.framework */,
 				CFB3F64C184619B000E2D967 /* XCTest.framework */,
+				63B394BE0D164322A3CEC025 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -135,7 +124,6 @@
 		CFB3F630184619B000E2D967 /* OAuthIOExample */ = {
 			isa = PBXGroup;
 			children = (
-				CFB3F662184619B600E2D967 /* OAuthIOSDK */,
 				CFB3F639184619B000E2D967 /* AppDelegate.h */,
 				CFB3F63A184619B000E2D967 /* AppDelegate.m */,
 				CFB3F63C184619B000E2D967 /* Main.storyboard */,
@@ -180,24 +168,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CFB3F662184619B600E2D967 /* OAuthIOSDK */ = {
-			isa = PBXGroup;
-			children = (
-				CFB3F663184619CA00E2D967 /* NSURLRequest+NSURLRequestAllowSSL.h */,
-				CFB3F664184619CA00E2D967 /* NSURLRequest+NSURLRequestAllowSSL.m */,
-				CFB3F665184619CA00E2D967 /* OAuthIO.h */,
-				CFB3F666184619CA00E2D967 /* OAuthIO.m */,
-				CFB3F667184619CA00E2D967 /* OAuthIOData.h */,
-				CFB3F668184619CA00E2D967 /* OAuthIOData.m */,
-				CFB3F669184619CA00E2D967 /* OAuthIOModal.h */,
-				CFB3F66A184619CA00E2D967 /* OAuthIOModal.m */,
-				CFB3F66B184619CA00E2D967 /* OAuthIOModal.xib */,
-				CFB3F66C184619CA00E2D967 /* OAuthIORequest.h */,
-				CFB3F66D184619CA00E2D967 /* OAuthIORequest.m */,
-			);
-			name = OAuthIOSDK;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -205,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CFB3F65C184619B000E2D967 /* Build configuration list for PBXNativeTarget "OAuthIOExample" */;
 			buildPhases = (
+				0A27DC44BA56409790F60D62 /* Check Pods Manifest.lock */,
 				CFB3F623184619B000E2D967 /* Sources */,
 				CFB3F624184619B000E2D967 /* Frameworks */,
 				CFB3F625184619B000E2D967 /* Resources */,
+				5B29C9BB5D8A4BEAAEB9A0DA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -277,7 +249,6 @@
 				CFB3F646184619B000E2D967 /* Images.xcassets in Resources */,
 				CFB3F635184619B000E2D967 /* InfoPlist.strings in Resources */,
 				CFB3F63E184619B000E2D967 /* Main.storyboard in Resources */,
-				CFB3F672184619CA00E2D967 /* OAuthIOModal.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,21 +262,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0A27DC44BA56409790F60D62 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5B29C9BB5D8A4BEAAEB9A0DA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CFB3F623184619B000E2D967 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CFB3F673184619CA00E2D967 /* OAuthIORequest.m in Sources */,
 				CFB3F63B184619B000E2D967 /* AppDelegate.m in Sources */,
 				CFB3F641184619B000E2D967 /* FirstViewController.m in Sources */,
-				CFB3F66F184619CA00E2D967 /* OAuthIO.m in Sources */,
 				CFB3F637184619B000E2D967 /* main.m in Sources */,
 				CFE8FCCA1846AAA9007C4BF6 /* GitHubViewController.m in Sources */,
 				CF21067E1853267D00290710 /* TwitterViewController.m in Sources */,
-				CFB3F66E184619CA00E2D967 /* NSURLRequest+NSURLRequestAllowSSL.m in Sources */,
-				CFB3F670184619CA00E2D967 /* OAuthIOData.m in Sources */,
-				CFB3F671184619CA00E2D967 /* OAuthIOModal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +428,7 @@
 		};
 		CFB3F65D184619B000E2D967 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABBCFC5BD6C342D2806E419F /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -442,6 +442,7 @@
 		};
 		CFB3F65E184619B000E2D967 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABBCFC5BD6C342D2806E419F /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
