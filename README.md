@@ -1,4 +1,8 @@
-# OAuth.io iOS SDK
+# OAuth.io iOS SDK [![License Apache 2.0](https://go-shields.herokuapp.com/license-Apache-blue.png)](https://tldrlegal.com/license/apache-license-2.0-(apache-2.0))
+[![Build Status](https://travis-ci.org/jk/oauth-ios.svg?branch=feature/travis)](https://travis-ci.org/jk/oauth-ios)
+
+[![Badge w/ Version](https://cocoapod-badges.herokuapp.com/v/OAuth.io/badge.svg)](http://cocoadocs.org/docsets/OAuth.io/)
+[![Badge w/ Platform](https://cocoapod-badges.herokuapp.com/p/OAuth.io/badge.svg)](http://cocoadocs.org/docsets/OAuth.io/)
 
 This is the official iOS SDK for [OAuth.io](https://oauth.io) !
 
