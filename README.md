@@ -43,67 +43,72 @@ To get the response from OAuthIO service, you must define a custom scheme and id
 
 Implement the method bellow in your AppDelegate File 
 
-    - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
-    {
-       [OAuthIOModal handleOAuthIOResponse:url];
-       return (YES);
-    }
+```objc
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+   [OAuthIOModal handleOAuthIOResponse:url];
+   return (YES);
+}
+```
 
 Put #import "OAuthIOModal.h" in your source file and don't forget to implement the OAuthIO protocol then in your ViewController instanciate the OAuthIOModal object
 
-    // ViewController.h
-    // ----------------
+`ViewController.h`:
+```objc
+#import <UIKit/UIKit.h>
+#import "OAuthIOModal.h"
 
-    #import <UIKit/UIKit.h>
-    #import "OAuthIOModal.h"
- 
-    @interface ViewController : UIViewController<OAuthIODelegate>
+@interface ViewController : UIViewController<OAuthIODelegate>
+```
 
+`ViewController.m`:
+```objc
+// …
 
-    // ViewController.m
-    // ----------------
+OAuthIOModal oauthioModal = [[OAuthIOModal alloc] initWithKey:@"Public key" delegate:self];
+[oauthioModal showWithProvider:@"github"];
 
-    ...
+// Or use this if a state parameter needs to be passed through:
+//[oauthioModal showWithProvider:@"github" options:@{@"state": @"STATE_VALUE"}];
 
-    OAuthIOModal oauthioModal = [[OAuthIOModal alloc] initWithKey:@"Public key" delegate:self];
-    [oauthioModal showWithProvider:@"github"];
-    
-    // Or use this if a state parameter needs to be passed through:
-    //[oauthioModal showWithProvider:@"github" options:@{@"state": @"STATE_VALUE"}];
+// …
+```
 
-    ...
 Implement these delegate methods in your ViewController
 
-    #pragma mark OAuthIO delegate methods
+```objc
+#pragma mark OAuthIO delegate methods
+- (void)didReceiveOAuthIOResponse:(OAuthIORequest *)request
+{
+   NSDictionary *params = @{@"name": @"New repo"};
+        
+  [request setContentType:@"json"]; // Github specification - This line convert params to JSON 
 
-    - (void)didReceiveOAuthIOResponse:(OAuthIORequest *)request
-    {
-       NSDictionary *params = @{@"name": @"New repo"};
-            
-      [request setContentType:@"json"]; // Github specification - This line convert params to JSON 
+  [request post:@"/user/repos" withParams:params success:^(NSString *output, NSHTTPURLResponse *httpResponse)           
+  { 
+     NSLog(@"output:%@, status code:%i", output, httpResponse.statusCode);
+  }];
 
-      [request post:@"/user/repos" withParams:params success:^(NSString *output, NSHTTPURLResponse *httpResponse)           
-      { 
-         NSLog(@"output:%@, status code:%i\n", output, httpResponse.statusCode);
-      }];
+}
 
-    }
-
-    - (void)didFailWithOAuthIOError:(NSError *)error
-    {
-      NSLog(@"Error : %@\n", error.description);
-    }
-
+- (void)didFailWithOAuthIOError:(NSError *)error
+{
+  NSLog(@"Error : %@", error.description);
+}
+```
+    
 ### Available methods for OAuthIORequest object
 
-    - (void)addHeaderWithKey:(NSString *)key andValue:(NSString *)value;
+```objc
+- (void)addHeaderWithKey:(NSString *)key andValue:(NSString *)value;
 
-    - (void)get:(NSString *)resource withParams:(id)params success:(RequestSuccessBlock)success;
+- (void)get:(NSString *)resource withParams:(id)params success:(RequestSuccessBlock)success;
 
-    - (void)post:(NSString *)resource withParams:(id)params success:(RequestSuccessBlock)success;
+- (void)post:(NSString *)resource withParams:(id)params success:(RequestSuccessBlock)success;
 
-    - (void)put:(NSString *)resource withParams:(id)params success:(RequestSuccessBlock)success;
+- (void)put:(NSString *)resource withParams:(id)params success:(RequestSuccessBlock)success;
 
-    - (void)patch:(NSString *)resource withParams:(id)params success:(RequestSuccessBlock)success;
+- (void)patch:(NSString *)resource withParams:(id)params success:(RequestSuccessBlock)success;
 
-    - (void)delete:(NSString *)resource success:(RequestSuccessBlock)success;
+- (void)delete:(NSString *)resource success:(RequestSuccessBlock)success;
+```
