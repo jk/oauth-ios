@@ -1,6 +1,5 @@
 # OAuth.io iOS SDK [![License Apache 2.0](https://go-shields.herokuapp.com/license-Apache-blue.png)](https://tldrlegal.com/license/apache-license-2.0-(apache-2.0))
 [![Build Status](https://travis-ci.org/jk/oauth-ios.svg?branch=feature/travis)](https://travis-ci.org/jk/oauth-ios)
-
 [![Badge w/ Version](https://cocoapod-badges.herokuapp.com/v/OAuth.io/badge.svg)](http://cocoadocs.org/docsets/OAuth.io/)
 [![Badge w/ Platform](https://cocoapod-badges.herokuapp.com/p/OAuth.io/badge.svg)](http://cocoadocs.org/docsets/OAuth.io/)
 
@@ -18,6 +17,22 @@ To use this plugin you will need to make sure you've registered your OAuth.io ap
 
 ### Installation
 
+#### CocoaPods
+That's the prefered way to install OAuth.io within your iOS app. Just add the following to your `Podfile`:
+
+```ruby
+pod 'OAuth.io', '~>1.0'
+```
+
+An example Podfile could be look like this:
+
+```ruby
+platform :ios, "7.1"
+
+pod 'OAuth.io', `~>1.0`
+```
+
+#### Manual
 Copy the source files within oauth-ios/Src to your project.
 
 ### Usage
