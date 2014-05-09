@@ -44,7 +44,10 @@ To get the response from OAuthIO service, you must define a custom scheme and id
 Implement the method bellow in your AppDelegate File 
 
 ```objc
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+- (BOOL)application:(UIApplication *)application 
+            openURL:(NSURL *)url 
+  sourceApplication:(NSString *)sourceApplication 
+         annotation:(id)annotation
 {
    [OAuthIOModal handleOAuthIOResponse:url];
    return (YES);
@@ -80,15 +83,13 @@ Implement these delegate methods in your ViewController
 #pragma mark OAuthIO delegate methods
 - (void)didReceiveOAuthIOResponse:(OAuthIORequest *)request
 {
-   NSDictionary *params = @{@"name": @"New repo"};
-        
-  [request setContentType:@"json"]; // Github specification - This line convert params to JSON 
-
-  [request post:@"/user/repos" withParams:params success:^(NSString *output, NSHTTPURLResponse *httpResponse)           
+  NSDictionary *params = @{@"name": @"New repo"};
+   // Github specification - Next line converts params to JSON 
+  [request setContentType:@"json"];
+  [request post:@"/user/repos" withParams:params success:^(NSString *output, NSHTTPURLResponse *httpResponse)
   { 
      NSLog(@"output:%@, status code:%i", output, httpResponse.statusCode);
   }];
-
 }
 
 - (void)didFailWithOAuthIOError:(NSError *)error
@@ -101,14 +102,9 @@ Implement these delegate methods in your ViewController
 
 ```objc
 - (void)addHeaderWithKey:(NSString *)key andValue:(NSString *)value;
-
 - (void)get:(NSString *)resource withParams:(id)params success:(RequestSuccessBlock)success;
-
 - (void)post:(NSString *)resource withParams:(id)params success:(RequestSuccessBlock)success;
-
 - (void)put:(NSString *)resource withParams:(id)params success:(RequestSuccessBlock)success;
-
 - (void)patch:(NSString *)resource withParams:(id)params success:(RequestSuccessBlock)success;
-
 - (void)delete:(NSString *)resource success:(RequestSuccessBlock)success;
 ```
