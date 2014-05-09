@@ -29,7 +29,7 @@ An example Podfile could be look like this:
 ```ruby
 platform :ios, "7.1"
 
-pod 'OAuth.io', `~>1.0`
+pod 'OAuth.io', '~>1.0'
 ```
 
 #### Manual
